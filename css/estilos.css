@@ -120,6 +120,9 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.project:last-child {
+  margin-bottom:0;
+}
 .project-course,
 .project-date,
 .project-url {
@@ -146,11 +149,12 @@ h2 {
 }
 
 .project-details {
-  width: 500px;
+  width: 50%;
+
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
 }
 
 .header {
@@ -236,16 +240,19 @@ figure {
   margin-left: 20px;
 }
 .event {
-  margin: 10px;
-  max-width: 480px;
-  width: 100%;
+  margin: 1%;
+  /* max-width: 48%; */
+  width: 48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
   background: #f4fbff;
 }
+.event-imageContainer {
+  font-size: 0;
+}
 .event img {
-  max-width: 480px;
+  /* max-width: 480px; */
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -332,8 +339,8 @@ figure {
 
 .container {
   /* border: 1px solid red; */
-  max-width: 1000px;
-  width: 100%;
+  max-width: 1024px;
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -342,11 +349,114 @@ figure {
   flex-wrap: inherit;
 }
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
+  .container {
+    margin: 0 15px;
+    /* width: auto; */
+    /* flex: 1; */
+  }
+  .event-list-title {
+    margin-left: 0;
+  }
+  .hero {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+  .hero-image {
+    position: absolute;
+    /* left: 0; */
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    max-width: initial;
+    width: 100%;
+    /* height: auto; */
+  }
+  .portfolio {
+    padding: 1.2rem 0;
+  }
+  h1 {
+    position: relative;
+    z-index: 2;
+  }
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.2em;
+    margin: 0 0 1.2rem 0;
+  }
+  .logo {
+    text-align: center;
+  }
+  .header {
+    height: auto;
+    display: block;
+  }
+  .header ol {
+    display: block;
+  }
+  .header a {
+    justify-content: center;
+    height: 40px;
+  }
+}
 
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 3em 1em;
+  }
+
+  .project-details {
+    width: auto;
+  }
+  .project-imageContainer {
+    width: auto;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  .event {
+    width: auto;
+    flex-shrink: initial;
+    margin: 0 0 20px 0;
+  }
+  .event-detail {
+    margin: -40px 20px 0 20px;
+  }
+
+  .contact {
+    display: block;
+    height: auto;
+    padding: 1.5em 0;
+  }
+  .form-email {
+    text-align: center;
+  }
+  .form-email button {
+    margin: 1em auto 1em;
+  }
+  .social {
+    text-align: center;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.2em;
+  }
 }
