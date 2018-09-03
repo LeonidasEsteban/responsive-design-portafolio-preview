@@ -422,6 +422,16 @@ figure {
   .project-imageContainer {
     width: auto;
   }
+  .project-title {
+    font-size: 1.2em;
+  }
+
+  .project-course, .project-date, .project-url {
+    margin: .4em 0;
+  }
+  .project-description {
+    font-size: .8em;
+  }
   h1 {
     font-size: 1.5em;
   }
